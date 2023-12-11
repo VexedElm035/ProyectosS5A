@@ -3,7 +3,7 @@
     --oscuro: #212121;
     --primario: #FFC107;
     --secundario: #0097A7;
-    --gris: #757575;
+    --gris: #d2d2d2;
     --fuente-principal:3.8rem;
 }
 /*hola COMENTARIO*/
@@ -129,7 +129,7 @@ h1,h2,h3{
     color: var(--blanco);
 }
 
-@media (min-width:768px){  /*tablet*/
+@media (min-width:935px){  /*tablet*/
     .navegacionprincipal{
         flex-direction:row ;
         justify-content: space-between;
@@ -192,4 +192,12 @@ h1,h2,h3{
 .foot{
     padding: 4rem;
     text-align: center;
+}
+
+.neg{
+    font-weight: bold;
+}
+
+.foto{
+    max-width: 100%;
 }

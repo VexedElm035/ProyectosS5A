@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="preload" href="static/styles.css" as="style"> 
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="static/styles.css">
 
 </head>
@@ -29,7 +29,7 @@
     </header>
 
     <main class="contenedor sombra">
-        <h2 class="titulo2"> Glosario</h2>
+        <h2 class="titulo2"> WIKI </h2>
 
         <div class="info">
             <div class="glosarioicon">
@@ -48,11 +48,9 @@
 
             <div class="nav-bg">
                 <nav class="navegacionprincipal contenedor">
-                    <a href="#">UNIDAD I</a>
-                    <a href="#">UNIDAD II</a>
-                    <a href="#">UNIDAD III</a>
-                    <a href="#">UNIDAD IV</a>
-                    <a href="#">UNIDAD V</a>
+                    <a onclick="mostrarSection('section01')">CONCEPTOS BÁSICOS</a>
+                    <a onclick="mostrarSection('section02')">CALIDAD DE SOFTWARE</a>
+                    <a onclick="mostrarSection('section03')">PROYECTO FINAL</a>
                 </nav>
             </div>
 
@@ -61,9 +59,9 @@
 
     </main>
 
-    <section class="contenedor2">
+    <section class="contenedor2 principales" id="section01">
         <section class="sombra2 contenedor">
-        <h2>UNIDAD I - Fundamentos de la ingeniería de software.</h2>
+        <h2>Conceptos Básicos.</h2>
 
         <div class="conceptos">
         <p>1.- ¿Qué es la Ingeniería de Software?</p>
@@ -122,33 +120,390 @@
             <p>- Mantenimiento: Mantener y mejorar el software para enfrentar errores descubiertos y nuevos requisitos. Esto puede llevar más tiempo incluso que el desarrollo inicial del software. Una pequeña parte de este trabajo consiste en arreglar errores, o bugs. La mayor parte consiste en extender el sistema para hacer nuevas cosas. Ya habiendo pasado por esta última fase se puede tener la seguridad de un buen software, funcional y correcto según las especificaciones y requisitos del usuario final.</p>
             <p></p>
             <p></p>
-            
-
         </section>
-
-        <!--
-        <section class="sombra2 contenedor">
-        <h2>UNIDAD II</h2>
-        <h3>El modelo de negocio</h3>
-        </section>
-
-        <section>
-        <h2>UNIDAD III</h2>
-        <h3>Ingeniería de requisitos</h3>
-        </section>
-
-        <section>
-        <h2>UNIDAD IV</h2>
-        <h3>Modelo de análisis</h3>
-        </section>
-
-        <section>
-        <h2>UNIDAD V</h2>
-        <h3>Calidad de software</h3>
-        </section>
-        -->
-
     </section>
+
+    <section class="contenedor2 principales" id="section02">
+        <section class="sombra2 contenedor">
+        <h2>Calidad de Software.</h2>
+
+
+        <div class="nav-bg">
+            <nav class="navegacionprincipal contenedor">
+                <a onclick="mostrarDiv('div1')">MODELOS DE MADUREZ</a>
+                <a onclick="mostrarDiv('div2')">ESTÁNDARES Y MÉTRICAS DE CALIDAD</a>
+                <a onclick="mostrarDiv('div3')">ENFOQUE DE PROCESO</a>
+                <a onclick="mostrarDiv('div4')">PSP/TSP</a>
+                <a onclick="mostrarDiv('div5')">SPICE</a>
+                <a onclick="mostrarDiv('div6')">CMMI</a>
+                <a onclick="mostrarDiv('div7')">MOPROSOFT</a>
+            </nav>
+        </div>
+
+        <div class="temas" id="div1">
+        <div class="conceptos" >
+        <p>1.- Modelos de madurez.</p>
+        </div>
+        <p>La medida en que una organización o una unidad organizacional desarrolla, asimila e implementa buenas prácticas en la gestión de proyectos, programas y carteras se denomina madurez de gestión de proyectos.
+            <br><br>
+            El nivel de madurez de la gestión de proyectos de una organización o unidad organizativa se puede medir utilizando un modelo de madurez.
+            <br><br>
+            Un modelo de madurez es un conjunto estructurado de elementos (buenas prácticas, herramientas de medición, estándares de análisis, etc.) que permite identificar las funciones de gestión de proyectos instaladas en una organización, compararlas con los estándares, identificar brechas o debilidades y establecer un proceso de mejora continua.
+            <br><br>
+            Los modelos de madurez en administración de proyectos derivan del Capability Maturity Model (CMM) desarrollado a requerimiento del Gobierno Federal de Estados Unidos en 1986 por el Software Engineering Institute (SEI) para la evaluación de procesos vinculados con el desarrollo de software. El objetivo de este modelo fue la provisión de un cuestionario que sirviese como herramienta para identificar las áreas donde los procesos de desarrollo de software necesitasen mejora.
+            <br><br>
+            Los modelos de madurez, para medir las capacidades instaladas en dirección de proyectos,  más conocidos son:
+            <br><br>
+            <span class="neg">• PMMM (Project Management Maturity Model)</span>, publicado en 1992 por Dekker, este modelo analiza el nivel de madurez a través de las nueve áreas de conocimiento del PMBOK, a través de 5 niveles de medición: 
+            <br><br>
+            <span class="neg">1)</span> Inicial; <br><span class="neg">2)</span> Repetición; <br><span class="neg">3)</span> Definición; <br><span class="neg">4)</span> Dirección; <br><span class="neg">5)</span> Optimización.
+            <br><br>
+            <span class="neg">• Kezner</span>, publicado  por Harold Kezner en el año 2000 en el libro, ¨Strategic Planning for Project Management¨, este modelo basado en el CMM y en el PMBOK, consta de 183 preguntas distribuidas en cinco niveles de medición: 
+            <br><br>
+            <span class="neg">1)</span> lenguaje común (80 preguntas); <br><span class="neg">2)</span> Procesos comunes (20 preguntas); <br><span class="neg">3)</span> Metodología común (42 preguntas); <br><span class="neg">4)</span> Comparación (25 preguntas); <br><span class="neg">5)</span> Mejoramiento continuo  (16 preguntas). 
+            <br><br>
+            Si bien este modelo analiza los mismos ámbitos que el OPM3, no evalúa la madurez de programas y de portafolio.
+            <br><br>
+            <span class="neg">• OPM3 (Organizational, Project Management Maturity Model)</span>, desarrollado por el PMI en el año 2003 y actualizado en el 2008 en una segunda versión, este modelo describe la metodología de medición de madurez organizacional en gerencia de proyectos de acuerdo con los estándares del PMI (Project Management Body Of Knowledge, The Standard for Portfolio Management y The Standard for Program Management, entre otros). 
+            <br><br>
+            El OPM3 establece una rejilla de buenas prácticas para los niveles de estandarización, medición, control y mejora continua para proyectos, programas y portafolio. Entre sus fortalezas destacan:
+            <br><br>
+            <span class="neg">-</span> Se basa en la guía del PMBOK.
+            <br><br>
+            <span class="neg">-</span> Permite identificar las buenas prácticas requeridas para mejorar las capacidades en dirección de proyectos y sus vinculaciones entre sí a nivel de procesos de dirección, áreas de conocimiento, procesos de gestión, procesos de estandarización, medición, control y mejora continua.
+            <br><br>
+            <span class="neg">-</span> Proporciona un medio objetivo para evaluar la madurez en dirección de proyectos con respecto a un conjunto de mejores prácticas reconocidas a nivel mundial y que prontamente se encontrarán vinculadas con una norma ISO.
+            <br><br>
+            <span class="neg">-</span> Incorpora la experiencia y conocimientos de cientos de profesionales en dirección de proyectos de un amplio espectro de industrias y área geográficas reflejadas a través de 574 buenas prácticas, 231 en dirección de proyectos, 235 para programas y 108 para la gestión de portafolios.
+        </p>
+        </div>
+        
+        <div class="temas" id="div2">
+        <div class="conceptos" >
+        <p>2.- Estándares y métricas de calidad.</p>
+        </div>
+        <p><span class="neg">ESTÁNDARES.</span>
+            <br><br>
+            Los estándares de calidad de software son normas emitidas por organismos específicos, que sirven para sentar un marco con el que comparar si un proceso de desarrollo es o no de calidad. Las normas de calidad del software más conocidas han sido desarrolladas por ISO, y son la serie ISO-9000.
+            <br><br>
+            FACTORES DE CALIDAD.
+            <br><br>
+            Los factores de calidad sirven para descomponer el concepto genérico de “calidad”; para facilitar su control y su medición. Se clasifican en:
+            <br><br>
+            <span class="neg">1)</span> Factores operativos: son aquellos que afectan al uso del software.
+            <br><br>
+            <span class="neg">2)</span> Factores de mantenimiento: son aquellos que se aplican a la capacidad de modificación del software.
+            <br><br>
+            <span class="neg">3)</span>Factores evolutivos: son aquellos que indican si el software se puede trasladar con facilidad a otra máquina o a otro producto de base (SO, SGBD).
+            <br><br>
+            <span class="neg">MÉTRICAS.</span> 
+            <br><br>
+            Las métricas del producto son una medida cuantitativa que permite a la gente del software tener una visión profunda de la eficacia del proceso del software y de los proyectos que dirigen utilizando el proceso como un marco de trabajo; son analizadas y evaluadas por los administradores del software.
+            <br><br>
+            VENTAJAS DEL USO DE METRICAS:
+            <br><br>
+            <span class="neg">-</span> Determina la calidad del producto.
+            <br><br>
+            <span class="neg">-</span> Evalúa la productividad de los desarrolladores.
+            <br><br>
+            <span class="neg">-</span> Se tiene conocimiento cuantitativo de las características del proceso y del producto.
+            <br><br>
+            <span class="neg">-</span> Se tiene un soporte para la estimación y la planificación.
+            <br><br>
+            <span class="neg">-</span> Se evalúan los beneficios (en cuanto a calidad y productividad) derivados del uso de nuevos métodos y herramientas de ingeniería del software.
+            <br><br>
+            <span class="neg">-</span> Establece una línea base para la estimación.
+            <br><br>
+            CARACTERISTICAS DE LAS METRICAS:
+            <br><br>
+            <span class="neg">-</span> ExactasPrecisas: No se debe perder información en los redondeos ya que la información se desvirtúa.
+            <br><br>
+            <span class="neg">-</span> Consistentes: Una medición de un atributo debe dar el mismo valor independientemente de la medición.
+        </p>
+        </div>
+        
+        <div class="temas" id="div3">
+        <div class="conceptos">
+        <p>3.- Enfoque de procesos.</p>
+        </div>
+        <p>
+            El resultado deseado por una organización se alcanza con más eficiencia cuando sus actividades y recursos relacionados, son manejados como procesos.
+            <br><br>
+            El enfoque orientado hacia los procesos permite una rápida y sencilla identificación de los problemas, así como la rápida resolución de estos sin la necesidad de mejorar el resto de los procesos que funcionan de manera correcta. Esto repercute positivamente en las capacidades de la organización y su capacidad para adaptarse al exigente y cambiante mercado.
+            <br><br>
+            Sistema por procesos:
+            <br><br>
+            El sistema por procesos es más fácil de implementar y más económico de mantener en correcto funcionamiento. Tiene la ventaja, de que, aunque un proceso afecte al resto de procesos, es más sencillo cambiar o mejorar el proceso, o partes de la cadena de procesos, sin que el resto de los procesos se vea afectado de forma negativa por la transformación.
+            <br><br>
+            La modificación o cambio de un proceso, no lleva aparejada la modificación o cambio del resto de procesos, cuyo funcionamiento, estructura y gestión siguen siendo iguales. Sin embargo, sí afecta al resultado final, por lo que todos los procesos, han de cumplir las con las expectativas y necesidades del resto de procesos. La responsabilidad de la mejora del proceso corresponde a los integrantes del proceso, con la ayuda de toda la organización.
+            <br><br>
+            Mejora tecnológica:	<br><br>
+            Aunque no se mencione en absoluto, se supone que los recursos técnicos son completamente eficaces y eficientes, se dispone de los recursos y conocimientos técnicos más adecuados, ya que esto es muy difícil o costoso de mejorar, por lo que, para mejorar el producto, es mejor mejorar otros aspectos de la organización, como las relaciones entre los miembros de esta. <br><br>
+            Una mejora tecnológica, produce resultados exponenciales, mientras que una mejora de la organización sigue una pauta directamente proporcional. Las mejoras tecnológicas, producen resultados inmediatos, mientras que la mejora de la organización produce resultados en el tiempo. <br><br>
+            Para conseguir la máxima satisfacción en el cliente se ha de mejorar la tecnología cuando resulte rentable pues los beneficios son inmediatos. Mejorar la organización en el resto de los casos, produce un aumento constante y predecible de la calidad final. La máxima calidad se obtiene con la unión de las mejoras tecnológicas y en el funcionamiento de la organización.
+        </p>
+        </div>   
+
+        <div class="temas" id="div4">
+        <div class="conceptos">
+        <p>4.- PSP/TSP: </p>
+        </div>
+        <p>
+            <span class="neg">PSP (Personal Software Process)</span>, es un conjunto de prácticas disciplinadas para la gestión del tiempo y mejora de la productividad personal de los programadores o ingenieros de software, en tareas de desarrollo y mantenimiento de sistemas. Está alineado y diseñado para emplearse en organizaciones con modelos de procesos CMMI o ISO 15504. Fue propuesto por Watts Humphrey en 1995 y estaba dirigido a estudiantes. A partir de 1997 con el lanzamiento del libro "An introduction to the Personal Software Process" se dirige ahora a ingenieros juniors. <br><br>
+            Se puede considerar como la guía de trabajo personal para ingenieros de software en organizaciones que emplean un modelo CMMI con nivel de madurez o de capacidad de procesos que implica la medición cualitativa y mejora de procesos. <br><br>
+            Uno de los mayores problemas que tiene es la gran cantidad de datos que hay que tomar. El PSP tiene obsesión por la toma de datos y elaboración de tablas. El PSP se orienta el conjunto de áreas clave del proceso que debe manejar un desarrollador cuando trabaja de forma individual. <br><br>
+            PSP, es uno de los 3 vértices donde descansa un proceso de mejora que trabaja sobre 3 niveles de la organización, los otros 2 son CMM y TSP. <br><br>
+            El PSP amplía el proceso de mejora a la gente que realiza el trabajo de desarrollo de software, concentrándose en las prácticas de trabajo de los ingenieros en una forma individual, enseñando como manejar la calidad desde el principio de un producto. PSP son nuestras propias métricas, que permiten estructurar y ordenar nuestro trabajo del día a día. El resultado de nuestro trabajo, además puede ser llevado a un trabajo en equipo TSP (Team Process Software), el cual es “comandado” por un sistema de gestión de la configuración y por supuesto, un Jefe de Proyecto quien evalúa los resultados y avances de los miembros del equipo. <br><br>
+            En PSP todas las tareas y actividades que el ingeniero de software debe realizar durante el proceso de desarrollo de un producto de software, están puntualmente definidas en un conjunto de documentos conocidos como scripts. Los scripts son el punto medular de PSP, por lo que se hace mucho énfasis en que deben ser seguidos en forma disciplinada, ya que de ello dependerá el éxito de la mejora que se busca. Gran parte de las tareas y actividades definidas en los scripts generará en su realización un conjunto de datos, fundamentalmente de carácter estadístico. La aplicación de PSP en varios procesos de desarrollo, y el análisis de la información estadística generada en cada uno de éstos, permitirán al ingeniero de software identificar, tanto sus fortalezas como sus debilidades, y crecer a través de un proceso de auto aprendizaje y auto mejora. La calidad en PSP, es un aspecto fuertemente relacionado con la cantidad de defectos que el producto de software contiene. <br><br>
+            Características: <br><br>
+            <span class="neg">-</span> Los pasos de registro de información a detalle en el nivel de medición pueden resultar frustrantes cuando se tiene presión de tiempo. <br><br>
+            <span class="neg">-</span> En los scripts de PSP no se incluyen tareas y actividades para la etapa de análisis de requerimientos. <br><br>
+            <span class="neg">-</span> Siempre se parte de una definición de requerimientos que no va a cambiar. Aún no existe una herramienta automatizada que facilite el registro y análisis de datos generados por la aplicación de PSP. <br><br>
+            Objetivos: <br><br>
+            <span class="neg">-</span> PSP pretende formar ingenieros de software con métodos disciplinados para mejorar su desarrollo personal de software. PSP le ayuda a los desarrolladores a: <br><br>
+            <span class="neg">-</span> Mejorar sus habilidades de estimación y planeación. <br><br>
+            <span class="neg">-</span> Hacer compromisos que se puedan cumplir. <br><br>
+            <span class="neg">-</span> Administrar la calidad de sus procesos. <br><br>
+            <span class="neg">-</span> Reducir la cantidad de defectos en sus productos. <br><br>
+            <span class="neg">TSP (Team Software Process)</span>, es un método de establecimiento y mejora del trabajo en equipo para procesos software. <br><br>
+            TSP proporciona directrices para ayudar a un equipo a establecer sus objetivos, a planificar sus procesos y a revisar su trabajo con el fin de que la organización pueda establecer prácticas de ingeniería avanzadas y así obtener productos eficientes, fiables y de calidad. Está formado por dos componentes primarios que abarcan distintos aspectos del trabajo en equipo: <br><br>
+            <span class="neg">-</span> Formación del equipo de trabajo. <br><br>
+            <span class="neg">-</span> Gestión del equipo de trabajo. <br><br>
+            Existen diferentes metodologías para la mejora de procesos, la mayoría de ellas se basa en la mejora de los procesos que dan como resultado un servicio o producto. El TSP busca integrar un equipo que tenga como punto de partida la unificación de este, para poder llevar a cabo todos aquellos procedimientos que puedan realizar mejora a los procesos que desarrollan. <br><br>
+            El Team Software Process (TSP) es un proceso de desarrollo para equipos de ingenieros basado en CMMI, ayuda a conformar equipos para el desarrollo de software de calidad. TSP proporciona directrices para ayudar a un equipo a establecer sus objetivos, a planificar sus procesos y a revisar su trabajo con el fin de que la organización pueda establecer prácticas de ingeniería avanzadas y así obtener productos eficientes, fiables y de calidad. TSP es una solución basada en procesos para resolver problemas de negocio, tales como: <br><br>
+            <span class="neg">-</span> Predictibilidad de costo y tiempo.<br><br>
+            <span class="neg">-</span> Mejora de productividad.<br><br>
+            <span class="neg">-</span> Ciclos de desarrollo y mejora de calidad de productos.          <br><br>                                 
+            Características de los grupos eficaces: <br><br>
+            <span class="neg">-</span> Miembros expertos en papeles de liderazgo y pertenencia. <br><br>
+            <span class="neg">-</span> Relaciones tranquilas y establecidas entre los miembros. <br><br>
+            <span class="neg">-</span> Los miembros se sienten atraídos por el grupo y son fieles. <br><br>
+            <span class="neg">-</span> Los valores y metas del grupo son los de sus integrantes. <br><br>
+            <span class="neg">-</span> Los miembros están motivados por hacer lo que puedan por el grupo. <br><br>
+            <span class="neg">-</span> La interacción y toma de decisiones tiene lugar en el ambiente adecuado. <br><br>
+            <span class="neg">-</span> El grupo desea ayudar a cada miembro a adquirir su pleno El grupo desea ayudar a cada miembro a adquirir su pleno potencial. <br><br>
+            <span class="neg">-</span> Cada miembro acepta con gusto y sin resentimiento las metas y normas establecidas. <br><br>
+            <span class="neg">-</span> Los miembros se prestan ayuda mutua cuando es necesaria o recomendable. <br><br>
+            <span class="neg">-</span> Existe una atmósfera de creatividad. <br><br>
+            <span class="neg">-</span> El grupo conoce el “conformismo constructivo” y se sirve de él. <br><br>
+            <span class="neg">-</span> Existe gran motivación para iniciar y recibir las comunicaciones. <br><br>
+            <span class="neg">-</span> Los miembros son flexibles y adaptables en sus metas y actitudes. <br><br>
+            <span class="neg">-</span> Los miembros se sienten seguros al tomar decisiones que les Los miembros se sienten seguros al tomar decisiones que les parecen apropiadas al entender la filosofía de la operación. <br><br>
+            Sus orígenes se deben a las limitaciones que el PSP (Personal Software Process, su antecesor) tenía en el ámbito industrial. PSP resultó muy efectivo para que los ingenieros pudiesen tener el control de su proceso personal mediante la mejora de sus habilidades de estimación y la reducción de los defectos introducidos en los productos sin afectar a su productividad, pero PSP sólo se enfocaba en las fases de desarrollo de software (diseño y pruebas unitarias); la aplicación que lo ingenieros hicieron del PSP dentro de las empresas resulto en prácticas no satisfactorias. <br><br>
+            Por tal motivo, Watts Humphrey desarrolló el TSP, el cual consideraba como parte importante, además de lo previsto por el PSP, los requisitos, las pruebas de integración, la documentación y otras actividades típicas en todo proyecto de desarrollo, de igual manera incluía actividades como los roles de equipo, interrelaciones dentro de la organización y la definición de un proceso de equipo para ser utilizado dentro de los procesos existentes en la organización. <br><br>
+            Los Roles (responsabilidades) en los equipos en STP son: <br><br>
+            <span class="neg">-</span> Líder del Equipo: Dirige al equipo, se asegura que todos reporten sus datos de los procesos y completen su trabajo tal y como se planeó. Realiza los reportes semanales del avance del equipo. <br><br>
+            <span class="neg">-</span> Gestor de desarrollo: Guía al equipo en el diseño y desarrollo del producto. <br><br>
+            <span class="neg">-</span> Gestor de Planificación: Apoya y guía al equipo en la planificación y seguimiento del trabajo. <br><br>
+            <span class="neg">-</span> Gestor de Calidad/Proceso: Apoya al equipo en definir sus necesidades acerca del proceso y a establecer y administrar el plan de calidad. <br><br>
+            <span class="neg">-</span> Genera estándares para obtener un trabajo uniforme. Modera las inspecciones y revisa cada artefacto generado. <br><br>
+            <span class="neg">-</span> Administrador de Requerimientos/Soporte: Dirige al equipo en el desarrollo de requerimientos de software y ayuda a dar a conocer la tecnología y en las necesidades de apoyo administrativo. <br><br>
+            <span class="neg">-</span> Administra el plan de configuración. <br><br>
+            Es necesario que los ingenieros que usan TSP estén formados en PSP. Con TSP, los equipos encuentran y reparan defectos en etapas tempranas del proceso de desarrollo, esto reduce de manera importante el tiempo de pruebas. Esto reduce de manera importante el tiempo de pruebas. Con un testing más corto, el ciclo completo se reduce. <br><br>
+            A diferencia de otros métodos, TSP mejora el desempeño tanto de equipos como individuos, es disciplinado y ágil, provee beneficios inmediatos y medibles y acelera las iniciativas de mejora de procesos organizacionales. <br><br>
+            En las fases del ciclo TSP se planea el número de ciclos. Dentro de cada ciclo se realiza: <br><br>
+            <span class="neg">-</span> Lanzamiento. <br><br>
+            <span class="neg">-</span> Estrategia. <br><br>
+            <span class="neg">-</span> Plan. <br><br>
+            <span class="neg">-</span> Requisitos. <br><br>
+            <span class="neg">-</span> Diseño. <br><br>
+            <span class="neg">-</span> Implementación. <br><br>
+            <span class="neg">-</span> Pruebas. <br><br>
+            <span class="neg">-</span> Postmortem. <br><br>
+            Los objetivos que tiene el TSP son: <br><br>
+            <span class="neg">-</span> Maximizar calidad software, minimizar costos. <br><br>
+            <span class="neg">-</span> Integrar equipos independientes de alto rendimiento que planeen su trabajo y establezcan metas de sus procesos y planes. <br><br>
+            <span class="neg">-</span> Mostrar a los gerentes como monitorear y motivar a sus equipos de trabajo y como ayudarlos a alcanzar su máxima productividad. <br><br>
+            Sus entornos son: <br><br>
+            <span class="neg">-</span> CMM- Administración. <br><br>
+            <span class="neg">-</span> TSP- Equipo Ingenieros. <br><br>
+            <span class="neg">-</span> PSP-Ingeniero.
+        </p>
+        </div>
+
+        <div class="temas" id="div5">
+        <div class="conceptos">
+        <p>5.- SPICE:</p>
+        </div>
+        <p>El ISO/IEC 15504, también conocido como Software Process Improvement Capability Determination, abreviado SPICE, en español, Determinación de la Capacidad de Mejora del Proceso de Software,es un modelo para la mejora, evaluación de los procesos de desarrollo, mantenimiento de sistemas de información y productos de software. <br><br>
+            En 1991, el proyecto SPICE fue creado bajo los auspicios del Comité Internacional de estándares de Ingeniería de Software y Sistemas a través de su Grupo de Trabajo sobre Evaluación de proceso (WG10). <br><br>
+            En 1992, el informe del grupo de estudio dijo que: “...la comunidad internacional debería poner recursos para desarrollar un estándar para la evaluación de procesos software, incorporando lo mejor de los métodos de evaluación de procesos existentes.” <br><br>
+            ISO decidió entonces se hiciera el desarrollo por pasos de un estándar para la evaluación de procesos. Los pasos fueron los siguientes: <br><br>
+            <span class="neg">-</span> Publicación inicial como Informe Técnico ‘Technical Report’ (“borrador de estándar”). <br><br>
+            <span class="neg">-</span> Revisión y publicación como estándar internacional IS ISO/IEC 15504. <br><br>
+            <span class="neg">-</span> Tecnologías de la Información. <br><br>
+            <span class="neg">-</span> Evaluación de Procesos (‘ISO/IEC 15504 Information Technology – Process Assessment’). <br><br>
+            El proyecto SPICE tenía tres objetivos principales: <br><br>
+            <span class="neg">-</span> Desarrollar un borrador de trabajo para un estándar de evaluación de procesos de software. <br><br>
+            <span class="neg">-</span> Llevar a cabo los ensayos de la industria de la norma emergente. <br><br>
+            <span class="neg">-</span> Promover la transferencia de tecnología de la evaluación de procesos de software a la industria del software a nivel mundial. <br><br>
+            El primer objetivo del proyecto se logró en junio de 1995, con la entrega del borrador de trabajo de la norma para la evaluación de procesos de software al WG10 para su votación entre la comunidad de estandarización internacional. El Borrador de Trabajo se denominaba comúnmente como el conjunto de documentos SPICE (o SPICE Versión 1). <br><br>
+            Los ensayos de estos primeros documentos SPICE han sido el foco del proyecto SPICE durante el período 1994 a 1998. Fue entonces, en 1998 cuando se publicó la primera familia de estándares ISO TR 15504. En aquel momento se comenzó a trabajar en la versión "Internacional Standard" de la norma, y desde 2006 está completamente publicado, exceptuadas las partes nuevas que se estén produciendo. <br><br>
+            En marzo de 2003, el proyecto SPICE se cerró oficialmente. La Red SPICE se estableció posteriormente con el encargo de seguir coordinando las actividades de la comunidad SPICE. La Red de SPICE está formalmente organizada por el ‘The Spice User Grupo’ (www.spiceusergroup.org). <br><br>
+            En este momento se efectúan actividades promocionales que se realizan a través de la Conferencia Internacional Anual SPICE y la publicación de artículos y libros. <br><br>
+            Con el fin de apoyar la excelencia y la coherencia de la formación de los evaluadores, el proyecto SPICE también desarrolló y lanzó un Plan de Estudios de formación de los evaluadores SPICE que es utilizado actualmente por el Esquema de Registro Internacional de Evaluadores (IntRSA).
+        
+        </p>
+        </div>
+
+        <div class="temas" id="div6">
+        <div class="conceptos">
+        <p>6.- CMMI - Capability Maturity Model Integration:</p>
+        </div>
+        <p>Integración de Modelos de Madurez de las Capacidades., es un modelo de evaluación de los procesos de una organización. Fue desarrollado inicialmente para los procesos relativos al software por la Universidad Carnegie-Mellon para el SEI (Software Engineering Institute). <br><br>
+            Este modelo establece un conjunto de prácticas o procesos clave agrupados en Áreas Clave de Proceso (KPA - Key Process Area). Para cada área de proceso define un conjunto de buenas prácticas que habrán de ser: <br><br>
+            <span class="neg">-</span> Definidas en un procedimiento documentado. <br><br>
+            <span class="neg">-</span> Provistas (la organización) de los medios y formación necesarios. <br><br>
+            <span class="neg">-</span> Ejecutadas de un modo sistemático, universal y uniforme (institucionalizadas). <br><br>
+            <span class="neg">-</span> Medidas. <br><br>
+            <span class="neg">-</span> Verificadas. <br><br>
+            A su vez estas áreas de proceso se agrupan en cinco “niveles de madurez”, de modo que una organización que tenga institucionalizadas todas las prácticas incluidas en un nivel y sus inferiores, se considera que ha alcanzado ese nivel de madurez. <br><br>
+            Los niveles son: <br><br>
+            <span class="neg">1)</span> Inicial. Las organizaciones en este nivel no disponen de un ambiente estable para el desarrollo y mantenimiento de software. Aunque se utilicen técnicas correctas de ingeniería, los esfuerzos se ven minados por falta de planificación. El éxito de los proyectos se basa la mayoría de las veces en el esfuerzo personal, aunque a menudo se producen fracasos y casi siempre retrasos y sobrecostes. El resultado de los proyectos es impredecible. <br><br>
+            <span class="neg">2)</span> Repetible. En este nivel las organizaciones disponen de unas prácticas institucionalizadas de gestión de proyectos, existen unas métricas básicas y un razonable seguimiento de la calidad. La relación con subcontratistas y clientes está gestionada sistemáticamente. <br><br>
+            <span class="neg">3)</span> Definido. Además de una buena gestión de proyectos, a este nivel las organizaciones disponen de correctos procedimientos de coordinación entre grupos, formación del personal, técnicas de ingeniería más detallada y un nivel más avanzado de métricas en los procesos. Se implementan técnicas de revisión por pares (peer reviews). <br><br>
+            4) Gestionado. Se caracteriza porque las organizaciones disponen de un conjunto de métricas significativas de calidad y productividad, que se usan de modo sistemático para la toma de decisiones y la gestión de riesgos. El software resultante es de alta calidad. <br><br>
+            5) Optimizado. La organización completa está volcada en la mejora continua de los procesos. Se hace uso intensivo de las métricas y se gestiona el proceso de innovación. <br><br>
+            Las prácticas que deben ser realizadas por cada área clave de proceso están organizadas en 5 características comunes, las cuales constituyen propiedades que indican si la implementación y la institucionalización de un proceso clave es efectivo, repetible y duradero. <br><br>
+            Estas 5 características son: <br><br>
+            <span class="neg">-</span> Compromiso de la realización. <br><br>
+            <span class="neg">-</span> La capacidad de realización. <br><br>
+            <span class="neg">-</span> Las actividades realizadas. <br><br>
+            <span class="neg">-</span> Las mediciones y el análisis. <br><br>
+            <span class="neg">-</span> La verificación de la implementación.
+        </p>
+        </div>
+
+        <div class="temas" id="div7">
+        <div class="conceptos">
+        <p>7.- MOPROSOFT:</p>
+        </div>
+        <p>Es el Modelo de Procesos para la Industria del Software. Un modelo para la mejora y evaluación de los procesos de desarrollo y mantenimiento de sistemas y productos de software. Desarrollado por la Asociación Mexicana para la Calidad en Ingeniería de Software a través de la Facultad de Ciencias de la Universidad Nacional Autónoma de México (UNAM) y a solicitud de la Secretaría de Economía para obtener una norma mexicana que resulte apropiada a las características de tamaño de la gran mayoría de empresas mexicanas de desarrollo y mantenimiento de software. <br><br>
+            El Programa para el Desarrollo de la Industria del Software (PROSOFT), es un plan de la Secretaría de Economía de México que forma parte del Plan Nacional de Desarrollo 2001-2006. Y está vigente a la fecha. <br><br>
+            PROSOFT tiene siete líneas estratégicas, siendo la sexta la que ha dado origen a MoProSoft: "Alcanzar niveles internacionales en capacidad de procesos". Al comenzar el desarrollo de esta línea estratégica se evaluó la adopción de los modelos: ISO 9000, ISO 15504, SW-CMM. El resultado de la evaluación fue: "Ninguno de los estándares o modelos cumple con los requisitos expresados por la industria nacional", y se decidió la elaboración de un modelo adecuado para las características de las empresas mexicanas, que se basaría en los modelos evaluados. <br><br>
+            <span class="neg"> Procesos que maneja Moprosoft: </span> <br><br>
+            Categoría alta dirección (DIR): La alta dirección tiene un papel importante a través de la planificación estratégica. Debe actuar como promotor del buen funcionamiento de la organización a través de su implicación en la revisión y mejora continua del modelo. <br><br>
+            <span class="neg"> Gestión de Negocio:</span><br><br>
+            Categoría Gerencia (GER): El modelo considera a la gestión como proveedora de recursos, procesos y proyectos; así como responsable de la vigilancia del cumplimiento de los objetivos estratégicos de la organización:
+            <span class="neg">-</span> Gestión de Proceso. <br><br>
+            <span class="neg">-</span> Gestión de Proyectos. <br><br>
+            <span class="neg">-</span> Gestión de Recursos Humanos y Ambiente de Trabajo o Bienes Servicios e Infraestructura o Conocimiento de la Organización. <br><br>
+            Categoría Operación (OPE): El modelo considera a la operación como ejecutora de los proyectos de desarrollo y mantenimiento de software. <br><br>
+            <span class="neg">-</span> Administración de Proyectos Específicos. <br><br>
+            <span class="neg">-</span> Desarrollo y Mantenimiento de Software. <br><br>
+            <span class="neg">-</span> El Programa para el Desarrollo de la Industria de Software (PROSOFT) fue implementado en octubre de 2002. <br><br>
+            <span class="neg">-</span> Recursos finales. <br><br>
+            En cada categoría se establecen roles y actividades a desarrollar, así como un responsable, una empresa o persona se puede certificar en MOPROSOFT para poder aplicar el modelo a sus desarrollos de software.
+        </p>
+        </div>
+        </section>
+    </section>
+
+
+    <section class="contenedor2 principales" id="section03">
+        <section class="sombra2 contenedor">
+        <h2>Proyecto Final.</h2>
+
+        <div class="conceptos">
+        <p>¿En qué consiste nuestro proyecto?</p>
+        </div>
+        <p>Desarrollamos la siguiente base de datos para la realización de un proyecto final en la materia de Administración de Base de Datos:</p>
+        <img class="foto" src="static/images/basedato.jpeg" alt="Base de datos">
+        <p>De esta base de datos, formulamos un enunciado para representar el proceso que la base de datos pueda usar y pueda manejar</p>
+        
+        <div class="conceptos"><p>Enunciado:</p></div>
+        <p>Una unidad crea una solicitud de recursos donde especifica el recurso solicitado, la cantidad y la prioridad de uso, una vez crea la solicitud, se envía al oficial designado de esa unidad. El oficial recibe la solicitud y procede a evaluar la solicitud, en caso de no aprobar la solicitud, el oficial manda una notificacion a la unidad sobre el estado de la evaluacion, la unidad recibe la respuesta y revisa su estrategia y cambia sus planes para poder rehacer la solicitud. En caso de que el oficial haya aprobado la solicitud, esta se registra en el sistema y una vez registrada se le notifica al Administrado de alto mando, el cual valora la solicitud, revisa si existen los recursos y el personal disponible solicitado y en base a eso aprueba o no la solicitud, si no aprueba la solicitud, en el Sistema se registra que la solicitud fue rechazada, luego el sistema notifica al oficial acerca del estado de su solicitud y procede a notificar a la unidad para que estos revisen su estrategia (tal y como se habia especificado antes). Si la solicitud es aprobada por el administrador de alto mando, el Sistema registra que la solicitud fue aceptada y el Sistema notifica al oficial el estado de su solicitud, a su vez el administrado de alto mando informa al emisor de entregas, el Receptor de entregas recibe la solicitud, registra el envío de suministros y a su vez, envía los recursos solicitados, el oficial recibe los recursos y revisa si se envió lo solicitado, en caso de que si se haya enviado lo solicitado, la unidad recibe los recursos y actualizan la informacion de los recursos. En caso de que no se haya enviado lo solicitado, la unidad recibe los recursos, actualiza la información de los recursos y al mismo tiempo revisan su estrategia y cambian sus planes para poder realizar otra solicitud hasta que se envíe lo solicitado.</p>
+        <p>Y en base a este enunciado, se contruyó el diagrama BPMN para representar este proceso. </p>
+        <div class="conceptos">
+            <p>Diagrama BPMN:</p>
+            </div>
+        <img class="foto" src="static/images/bpmn.png" alt="BPMN">    
+        <p>Ahora creamos el diagrama de casos de uso.</p>
+        <div class="conceptos">
+            <p>Diagrama de casos de uso:</p>
+            </div>
+        <img class="foto" src="static/images/casos de uso.png" alt="Casos de uso">
+        <p>Mencionaremos los tipos de requisitos que se necesitan para llevar a cabo este proyecto de la mejor manera.</p>
+        <div class="conceptos">
+            <p>Tipos de requisitos:</p>
+            </div>
+        <p>
+             <div class="conceptos">Requisitos Funcionales: </div><br>
+            1.	La Unidad debe poder crear una solicitud de recursos especificando el recurso, la cantidad y la prioridad de uso. <br>
+            2.	La solicitud creada por la unidad debe ser enviada al Oficial designado. <br>
+            3.	El Oficial debe poder recibir y evaluar la solicitud. <br>
+            4.	En caso de rechazo, el Oficial debe poder enviar una notificación a la Unidad. <br>
+            5.	Si el Oficial aprueba la solicitud, esta debe ser registrada en el Sistema y notificada al Administrador de alto mando. <br>
+            6.	El Administrador de alto mando debe poder valorar la solicitud y revisar la disponibilidad de recursos y personal. <br>
+            7.	El Sistema debe poder registrar el estado de la solicitud (aceptada o rechazada) y notificar al Oficial y a la Unidad. <br>
+            8.	El Emisor de entregas debe poder recibir la solicitud, registrar el envío de suministros y enviar los recursos solicitados. <br>
+            9.	El Oficial debe poder recibir y revisar los recursos enviados. <br>
+            10.	La Unidad debe poder recibir los recursos y actualizar la información de los recursos. <br>
+            <br>  <div class="conceptos">Requisitos No Funcionales: </div><br>
+            1.	El sistema debe ser capaz de manejar múltiples solicitudes y usuarios simultáneamente. <br>
+            2.	El sistema debe garantizar la seguridad y privacidad de la información de las solicitudes. <br>
+            3.	El sistema debe proporcionar notificaciones en tiempo real sobre el estado de las solicitudes. <br>
+            4.	El sistema debe ser fácil de usar para todas las partes involucradas (unidad, oficial, administrador de alto mando, emisor de entregas). <br>
+            5.	El sistema debe ser confiable, es decir, debe funcionar correctamente y sin interrupciones. <br>
+            6.	El sistema debe ser capaz de manejar y registrar correctamente los recursos y las solicitudes. <br>
+            <br>   <div class="conceptos">Requisitos de Interfaz: </div><br>
+            1.	La interfaz debe permitir a la unidad crear y enviar solicitudes de manera eficiente. <br>
+            2.	La interfaz debe proporcionar al oficial y al administrador de alto mando las herramientas necesarias para evaluar las solicitudes. <br>
+            3.	La interfaz debe permitir al emisor de entregas registrar el envío de suministros de manera efectiva. <br>
+            <br>   <div class="conceptos">Requisitos de Usuario: </div><br>
+            1.	La unidad debe ser capaz de crear, enviar y revisar solicitudes. <br>
+            2.	El oficial debe poder recibir, evaluar y responder a las solicitudes. <br>
+            3.	El administrador de alto mando debe poder valorar las solicitudes y revisar la disponibilidad de recursos y personal. <br>
+            4.	El emisor de entregas debe poder recibir la solicitud, registrar el envío de suministros y enviar los recursos solicitados. <br>
+            <br>    <div class="conceptos">Requisitos de Seguridad: </div><br>
+            1.	El sistema debe garantizar la privacidad y seguridad de la información de las solicitudes. <br>
+            2.	El sistema debe tener medidas de seguridad para prevenir accesos no autorizados. <br>
+            3.	El sistema debe tener un protocolo de recuperación de datos en caso de fallos. <br>
+            <br>   <div class="conceptos">Requisitos de Rendimiento: </div><br>
+            1.	El sistema debe ser capaz de manejar múltiples solicitudes simultáneamente sin degradar el rendimiento. <br>
+            2.	El sistema debe proporcionar respuestas rápidas a las solicitudes de los usuarios. <br>
+            3.	El sistema debe ser capaz de escalar para manejar un aumento en la cantidad de usuarios o solicitudes. <br>
+            <br>  <div class="conceptos">Requisitos de Registro y Seguimiento: </div><br>
+            1.	El sistema debe registrar todas las solicitudes y las acciones realizadas en ellas. <br>
+            2.	El sistema debe proporcionar a los usuarios la capacidad de rastrear el estado de sus solicitudes. <br>
+            3.	El sistema debe mantener un historial de todas las solicitudes y las acciones realizadas en ellas. <br>
+            <br> <div class="conceptos">Requisitos de Comunicación: </div><br>
+            1.	El sistema debe proporcionar notificaciones en tiempo real sobre el estado de las solicitudes. <br>
+            2.	El sistema debe permitir la comunicación eficiente entre todas las partes involucradas. <br>
+            3.	El sistema debe proporcionar a los usuarios la capacidad de enviar y recibir mensajes relacionados con las solicitudes. <br>
+            <br> <div class="conceptos">Requisitos de Actualización de Información: </div><br>
+            1.	El sistema debe permitir a la unidad actualizar la información de los recursos.
+            2.	El sistema debe reflejar en tiempo real cualquier cambio en el estado de las solicitudes o en la información de los recursos. <br>
+            <br> <div class="conceptos">Requisitos de Verificación: </div><br>
+            1.	El oficial debe poder verificar si los recursos enviados coinciden con los solicitados. <br>
+            2.	El sistema debe proporcionar las herramientas necesarias para facilitar esta verificación. <br>
+            <br> <div class="conceptos">Requisitos de Aprobación: </div><br>
+            1.	El oficial y el administrador de alto mando deben tener la capacidad de aprobar o rechazar solicitudes. <br>
+            2.	El sistema debe registrar y reflejar correctamente el estado de aprobación de las solicitudes. <br>
+            <br> <div class="conceptos">Requisitos de Hardware y Software: </div><br>
+            1.	El sistema debe ser compatible con los dispositivos y sistemas operativos utilizados por la unidad, el oficial, el administrador de alto mando y el emisor de entregas. <br>
+            <br><div class="conceptos">Requisitos de Red: </div><br>
+            1.	El sistema debe funcionar correctamente en la red utilizada por la organización, permitiendo la comunicación eficiente entre todas las partes involucradas. <br>
+            <br><div class="conceptos">Requisitos de Datos: </div><br>
+            1.	El sistema debe permitir a la unidad, al oficial y al administrador de alto mando introducir y actualizar la información de las solicitudes y los recursos. <br>
+            2.	El sistema debe almacenar de forma segura toda la información relacionada con las solicitudes y los recursos. <br>
+            <br> <div class="conceptos">Requisitos de Legalidad: </div><br>
+            1.	El sistema debe cumplir con todas las leyes y regulaciones aplicables, incluyendo las leyes de privacidad de datos. <br>
+            <br><div class="conceptos">Requisitos de Accesibilidad: </div><br>
+            1.	El sistema debe ser accesible para todos los usuarios, independientemente de sus habilidades físicas o técnicas. <br>
+            <br><div class="conceptos">Requisitos de Escalabilidad: </div><br>
+            1.	El sistema debe ser capaz de manejar un aumento en el número de solicitudes o usuarios sin degradar el rendimiento.<br>
+            <br><div class="conceptos">Requisitos de Mantenibilidad:</div><br>
+            1.	El sistema debe ser fácil de mantener y actualizar para los desarrolladores, permitiendo la incorporación de nuevas funcionalidades o la corrección de errores de manera eficiente.
+            
+            
+        </p>
+        
+        </section>    
+    </section>
+
+
+
 <section class="contacto">
     <section>
         <div class="conceptos">
@@ -163,11 +518,38 @@
     </section>
 
     <footer class="foot">
-        <!--<p>Todos los derechos reservados</p>-->
+        
     </footer>
 
 </section>
 
+<script>
+    $(".temas:not(:first)").hide();
+    function mostrarDiv(divId) {
+      $(".temas").hide();
+      $("#" + divId).show();
+    }
+
+    $(".principales:not(:first)").hide();
+    function mostrarSection(sectionid) {
+      $(".principales").hide();
+      $("#" + sectionid).show();
+    }
+</script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
